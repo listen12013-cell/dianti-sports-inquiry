@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>迪安特体育 - 运动地胶方案问询</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'PingFang SC', 'Helvetica Neue', Arial, sans-serif; }
+        body { background: #f5f7fa; padding: 15px; color: #333; font-size: 15px; line-height: 1.5; }
+        
+        .container { max-width: 100%; }
+        
+        /* 头部 */
+        .header { 
+            background: linear-gradient(135deg, #1a6dcc 0%, #0d4d9c 100%); 
+            color: white; 
+            padding: 25px 20px; 
+            border-radius: 12px; 
+            margin-bottom: 20px; 
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(26, 109, 204, 0.2);
+        }
+        .header h1 { font-size: 20px; margin-bottom: 8px; font-weight: 600; }
+        .header .subtitle { font-size: 14px; opacity: 0.9; margin-bottom: 10px; }
+        .company { 
+            display: inline-block; 
+            background: rgba(255, 204, 0, 0.9); 
+            color: #0d4d9c; 
+            padding: 6px 15px; 
+            border-radius: 20px; 
+            font-weight: bold; 
+            font-size: 15px; 
+            margin-top: 8px;
+        }
+        
+        /* 表单部分 */
+        .form-section { 
+            background: white; 
+            border-radius: 12px; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+            border: 1px solid #eef2f7;
+        }
+        .section-title { 
+            color: #1a6dcc; 
+            font-size: 17px; 
+            font-weight: 600; 
+            margin-bottom: 20px; 
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f4f9;
+            display: flex;
+            align-items: center;
+        }
+        .section-title i { margin-right: 10px; font-size: 16px; }
+        
+        /* 表单组 */
+        .form-group { margin-bottom: 20px; }
+        .form-group label { 
+            display: block; 
+            font-weight: 500; 
+            margin-bottom: 8px; 
+            color: #444; 
+            font-size: 15px;
+        }
+        .required::after { 
+            content: " *"; 
+            color: #e63946; 
+            font-weight: bold;
+        }
+        
+        /* 输入框 */
+        input, select, textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #d1d9e6;
+            border-radius: 8px;
+            font-size: 15px;
+            background: #f9fbfd;
+            transition: all 0.3s;
+        }
+        
+        /* 提交按钮 */
+        .submit-btn {
+            background: linear-gradient(to right, #1a6dcc, #0d4d9c);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 18px;
+            font-size: 17px;
+            font-weight: 600;
+            width: 100%;
+            margin: 25px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+            padding: 20px 15px;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+        .footer strong { color: #1a6dcc; }
+        
+        /* 成功消息 */
+        .success-message {
+            display: none;
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            color: #155724;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>专业运动地胶定制方案问询</h1>
+            <p class="subtitle">一站式解决方案 · 免费设计 · 快速响应</p>
+            <div class="company">迪安特体育</div>
+        </div>
+        
+        <form id="wechatForm">
+            <!-- 第一部分：项目概况 -->
+            <div class="form-section">
+                <div class="section-title">
+                    <i class="fas fa-clipboard-list"></i> 项目概况
+                </div>
+                
+                <div class="form-group">
+                    <label class="required">项目类型</label>
+                    <select required>
+                        <option value="">请选择项目类型</option>
+                        <option>学校体育馆</option>
+                        <option>专业篮球/羽毛球馆</option>
+                        <option>商业健身房</option>
+                        <option>舞蹈培训中心</option>
+                        <option>企业活动室</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="required">项目所在地</label>
+                    <input type="text" placeholder="省/市/区" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="required">预计施工时间</label>
+                    <input type="month" required>
+                </div>
+            </div>
+            
+            <!-- 第二部分：技术需求 -->
+            <div class="form-section">
+                <div class="section-title">
+                    <i class="fas fa-cogs"></i> 技术需求
+                </div>
+                
+                <div class="form-group">
+                    <label class="required">主要运动功能</label>
+                    <div style="margin-top:8px;">
+                        <div style="display:flex;align-items:center;margin-bottom:10px;padding:10px;background:#f9fbfd;border-radius:8px;">
+                            <input type="checkbox" style="width:20px;height:20px;margin-right:12px;"> <span>篮球</span>
+                        </div>
+                        <div style="display:flex;align-items:center;margin-bottom:10px;padding:10px;background:#f9fbfd;border-radius:8px;">
+                            <input type="checkbox" style="width:20px;height:20px;margin-right:12px;"> <span>羽毛球</span>
+                        </div>
+                        <div style="display:flex;align-items:center;margin-bottom:10px;padding:10px;background:#f9fbfd;border-radius:8px;">
+                            <input type="checkbox" style="width:20px;height:20px;margin-right:12px;"> <span>健身/器械</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>特殊要求</label>
+                    <textarea placeholder="如：需要防潮处理、加强耐磨、颜色定制等" rows="3"></textarea>
+                </div>
+            </div>
+            
+            <!-- 第三部分：商务需求 -->
+            <div class="form-section">
+                <div class="section-title">
+                    <i class="fas fa-file-invoice-dollar"></i> 商务需求
+                </div>
+                
+                <div class="form-group">
+                    <label class="required">预估面积 (㎡)</label>
+                    <input type="number" placeholder="请输入面积" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>预算范围</label>
+                    <div style="display:flex;gap:10px;margin-top:8px;">
+                        <input type="number" placeholder="元/㎡" style="flex:1;">
+                        <span style="color:#666;padding:0 8px;">或</span>
+                        <input type="number" placeholder="总预算(万元)" style="flex:1;">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 第四部分：客户信息 -->
+            <div class="form-section">
+                <div class="section-title">
+                    <i class="fas fa-user-tie"></i> 客户信息
+                </div>
+                
+                <div class="form-group">
+                    <label class="required">单位名称</label>
+                    <input type="text" placeholder="公司/学校/机构全称" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="required">联系人</label>
+                    <input type="text" placeholder="姓名及职务" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="required">联系电话</label>
+                    <input type="tel" placeholder="手机号码" required>
+                </div>
+            </div>
+            
+            <!-- 承诺区域 -->
+            <div style="background:#f0f7ff;border-left:5px solid #1a6dcc;padding:20px;border-radius:10px;margin:25px 0;">
+                <div style="color:#1a6dcc;font-weight:600;margin-bottom:12px;">
+                    <i class="fas fa-award"></i> 【迪安特体育】承诺
+                </div>
+                <p>• 24小时内提供初步方案</p>
+                <p>• 免费提供样品与技术资料</p>
+                <p>• 专业检测报告（环保/防火/运动性能）</p>
+                <p>• 支持尺寸、颜色、LOGO定制</p>
+            </div>
+            
+            <!-- 提交按钮 -->
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> 提交问询，获取专业方案
+            </button>
+            
+            <!-- 成功消息 -->
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle"></i>
+                <h3>问询提交成功！</h3>
+                <p>迪安特体育专业顾问将在24小时内联系您</p>
+            </div>
+            
+            <div class="footer">
+                <p><strong>迪安特体育 · 专业运动地面系统解决方案</strong></p>
+                <p>运动地胶 | 健身房地板 | 体育场馆材料 | 定制设计</p>
+                <p>© 2025 迪安特体育 保留所有权利</p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('wechatForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 验证必填项
+            const required = document.querySelectorAll('[required]');
+            let valid = true;
+            
+            required.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = '#e63946';
+                    valid = false;
+                } else {
+                    field.style.borderColor = '#1a6dcc';
+                }
+            });
+            
+            if (!valid) {
+                alert('请填写所有必填字段（标有 * 的字段）');
+                return;
+            }
+            
+            // 显示成功消息
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // 模拟提交成功
+            setTimeout(() => {
+                alert('感谢提交！迪安特体育将在24小时内联系您，提供专业方案。');
+            }, 500);
+        });
+    </script>
+</body>
+</html>
